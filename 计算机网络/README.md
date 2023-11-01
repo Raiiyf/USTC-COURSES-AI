@@ -2,4 +2,4 @@
 
 教师：郑烇
 
-实验一和实验四使用 <a href=vlab.ustc.edu.cn>vlab</a> 中创建的 ubuntu 虚拟机完成。
+实验一和实验四使用 <a href=https://vlab.ustc.edu.cn/>vlab</a> 中创建的 ubuntu 虚拟机完成。
