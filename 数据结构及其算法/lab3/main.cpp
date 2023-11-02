@@ -6,7 +6,7 @@ int main()
 	FILE* fp;
 
 	int err;
-	err = fopen_s(&fp, "../test.txt", "r");
+	err = fopen_s(&fp, "./test.txt", "r");
 	if (err != 0) {
 		printf("Fail to open file test.txt\n");
 		exit(0);
@@ -15,13 +15,13 @@ int main()
 	int i;
 	char t[100];
 	printf("Please enter the pattern string:");
+	// Since we will be using t[-1] clauses later
+	// Need to previously assign a value to it. ('x' in this case)
 	scanf("%[^\n]s", t + 1);
 	t[0] = 'x';
 
-	//for (i = 0; s[i - 1] != '\n'; i++) {
-	//	s[i] = getchar();
-	//}
-	//s[i - 1] = '\0';
+	// Previous
+	// scanf("%[^\n]s", t);
 
 	int start=0;
 	int frequency=0,flag=0,row=0;
