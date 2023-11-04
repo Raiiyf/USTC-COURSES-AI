@@ -1,0 +1,35 @@
+        .ORIG x3000
+                
+        ADD R1,R1,#1    
+        ADD R2,R2,#1
+        ADD R3,R3,#2
+        LD  R5,MOD
+        
+        ADD R0,R0,#-2   
+        BRp LOOP
+        BRn BASEI
+        ADD R7,R7,#1
+BASEI   ADD R7,R7,#1    
+        BRnzp FIN
+        
+LOOP    BRz FIN        
+        ADD R4,R1,R1
+        ADD R7,R4,R3
+        AND R7,R7,R5    
+        ADD R1,R2,#0
+        ADD R2,R3,#0
+        ADD R3,R7,#0    
+                       
+        ADD R0,R0,#-1
+        BRnzp LOOP
+        
+FIN     HALT
+        
+MOD     .FILL x03FF
+
+F20     .FILL #930
+F06     .FILL #18
+F12     .FILL #418
+F10     .FILL #146
+
+        .END
